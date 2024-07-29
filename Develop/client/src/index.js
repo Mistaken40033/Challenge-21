@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client'; // Import createRoot from react-dom/client
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,7 +8,10 @@ import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import ApolloProvider from './utils/ApolloProvider';
 
-ReactDOM.render(
+const container = document.getElementById('root'); // Get the root element
+const root = createRoot(container); // Create a root
+
+root.render(
   <React.StrictMode>
     <ApolloProvider>
       <BrowserRouter>
@@ -20,6 +23,5 @@ ReactDOM.render(
         </Routes>
       </BrowserRouter>
     </ApolloProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
