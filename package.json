@@ -1,9 +1,14 @@
 {
   "name": "challenge-21",
   "version": "1.0.0",
-  "description": "MERN Challenge: Book Search Engine\r ## Description",
-  "main": "index.js",
+  "description": "MERN Challenge: Book Search Engine",
+  "main": "server/server.js",
   "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"nodemon server/server.js\" \"npm start --prefix client\"",
+    "install-client": "npm install --prefix client",
+    "install-server": "npm install --prefix server",
+    "build": "npm run build --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +21,8 @@
     "express": "^4.19.2",
     "graphql": "^16.9.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.5.1"
+    "mongoose": "^8.5.1",
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.22"
   }
 }
