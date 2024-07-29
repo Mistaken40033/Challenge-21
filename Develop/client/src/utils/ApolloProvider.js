@@ -1,10 +1,9 @@
-// src/utils/ApolloProvider.js
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider as Provider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: '/graphql', // Ensure this is the correct URL for your GraphQL endpoint
 });
 
 const authLink = setContext((_, { headers }) => {
