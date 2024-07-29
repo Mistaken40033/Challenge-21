@@ -5,7 +5,7 @@ import SignupForm from './SignupForm';
 import LoginForm from './LoginForm';
 import Auth from '../utils/auth';
 
-const NavbarComponent = () => {
+const AppNavbar = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -35,7 +35,13 @@ const NavbarComponent = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Modal size="lg" show={showModal} onHide={() => setShowModal(false)} aria-labelledby="signup-modal">
+
+      <Modal
+        size="lg"
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        aria-labelledby="signup-modal"
+      >
         <Tab.Container defaultActiveKey="login">
           <Modal.Header closeButton>
             <Modal.Title id="signup-modal">
@@ -65,4 +71,4 @@ const NavbarComponent = () => {
   );
 };
 
-export default NavbarComponent;
+export default AppNavbar;
