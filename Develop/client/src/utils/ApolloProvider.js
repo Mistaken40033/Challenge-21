@@ -1,11 +1,6 @@
 // src/utils/ApolloProvider.js
 import React from 'react';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider as Provider,
-  createHttpLink,
-} from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider as Provider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({

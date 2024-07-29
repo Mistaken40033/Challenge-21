@@ -18,6 +18,8 @@
     },
     "dependencies": {
         "apollo-server-express": "^3.13.0",
-        "graphql": "^16.9.0"
+        "graphql": "^16.9.0",
+        "react-bootstrap": "^2.10.4",
+        "react-router-dom": "^6.25.1"
     }
 }
